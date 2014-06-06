@@ -37,6 +37,7 @@ article
   transition: background slide_transition_length slide_transition_easing
   display: none
   &.bespoke-parent
+    background: rgb(240,240,240)
     display: block
     position: absolute
     top: 0
@@ -50,6 +51,25 @@ article
     perspective: 600px
 
 .bespoke-slide
+  &.deck-slide
+    padding: 0
+    background: transparent
+    h1,
+    p
+      width: 100%
+      font-weight: 200;
+      color: hsl(0, 0%, 90%)
+      text-align: left
+      color: black
+    h1
+      font-size: 55px
+      margin-top: 3em
+      margin-left: 0.8em
+    p
+      margin-left: 0
+      margin-right: 0
+      font-size: 16px
+      margin-left: 3em
   transition:
     transform slide_transition_length slide_transition_easing,
     opacity slide_transition_length slide_transition_easing,
