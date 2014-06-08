@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Adaptive Web Design</title>
+    <link rel="stylesheet" href="styles/styles.css"/>
+  </head>
+  <body>
+    <article>
+      <section class="deck-slide"><img src="styles/title.png" width="400px">
+        <p>By <a href="http://www.janantala.com/">Ján Antala</a></p>
+        <p>Supervisor: Assoc. Professor <a href="http://www2.fiit.stuba.sk/~cernans/main/contact.html">Michal Čerňanský</a></p>
+        <p>FIIT STU - Jun 11, 2014</p>
+      </section>
+      <section>
+        <h2>Adaptive Web Design</h2>
+        <p>We consider <i>adaptive web design</i> as an equal with creating a <strong>single Web experience</strong>.</p>
+        <p>We can adjust it based on the <strong>capabilities</strong> of the device and browser.</p>
+        <p>Website can detect available features, access sensors in devices and use them to <strong>enhance</strong> user experience.</p>
+      </section>
+      <section>
+        <h3>Progressive enhancement</h3>
+        <p>Adaptive web design is fundamentally <i>Progressive enhancement</i>, but it is being applied to a much larger and <strong>more diverse landscape</strong>.</p>
+        <p>We now have Web-enabled <i>smartphones, tablets, e-readers, netbooks, watches, TVs, phablets, notebooks, game consoles, cars and more</i>.</p>
+        <p>We also have many types of internet networks with different speed, latency and quality.</p>
+      </section>
+      <section>
+        <h3>Responsive design</h3>
+        <p><i>Responsive design</i> is also one technique in an adaptive web design strategy.</p>
+        <p>Creating flexible layouts is important, but there are many <strong>more factors we need to think about</strong>.</p>
+        <p>It is also important to consider as well ergonomics, touch capability, other input methods, internet connections and many other features that can be detected.</p>
+      </section>
+      <section>
+        <h2>Hypothesis</h2>
+        <hr>
+        <ul>
+          <li>enhance control of the web apps using adaptive input methods</li>
+          <li>save transferred data</li>
+          <li>improve page load times</li>
+          <li>easy integration into existing web apps</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Adaptive web components</h2>
+        <p>There are many commonly used web services (<i>videos, maps...</i>) that produce many requests and <strong>unnecessary web traffic</strong> even the website user does not want to use them.</p>
+        <hr><img src="styles/youtube-timeline.png" width="400px">
+        <hr>
+        <p>To load an average YouTube video we need to make 9 requests and download 1517 kB of data.</p>
+      </section>
+      <section>
+        <h3>Adaptive web components</h3>
+        <p>There are also <strong>native mobile applications</strong> for that services with better perfomance and provide full user experience.</p>
+        <hr>
+        <div class="slideshow"><img src="styles/gmaps-discover.png" height="200px"><img src="styles/gmaps-navigate.png" height="200px"><img src="styles/gmaps-streetview.png" height="200px"><img src="styles/youtube-more.png" height="200px"></div>
+      </section>
+      <section>
+        <h3>Adaptive web components</h3>
+        <p>We can utilize <strong>conditional loading</strong> to serve the best experience <br/>for the right context.</p>
+        <hr><img src="styles/maps.png" width="400px">
+      </section>
+      <section>
+        <h3>Adaptive web components</h3>
+        <p>...and hide the logic behind the <strong>reuseable</strong> web component.</p>
+        <hr>
+        <pre><code class="language-javascript">$scope.options = {
+  sensor: false,
+  size: '500x300',
+  zoom: 9,
+  center: 'San Francisco International Airport',
+  markers: ['San Francisco', 'San Jose'],
+  maptype: 'terrain'
+};
+
+&lt;googlemaps class="google-maps" options="options"/&gt;
+</code></pre>
+      </section>
+      <section>
+        <h3>Adaptive web components</h3>
+        <p>We can save <strong>3 requests</strong> and up to <strong>1100 kB of traffic</strong> for an average Youtube video*.</p>
+        <p>We can save <strong>62 requests</strong> and up to <strong>5000 kB of traffic</strong> for an average Google Map component*.</p>
+        <hr><img src="styles/gmaps-fullload.png" width="400px">
+        <hr>
+        <p>Page load times for an average Youtube video.</p>
+      </section>
+      <section>
+        <h2>Conclusion</h2>
+        <ul>
+          <li>We can <strong>enhance user exparience</strong> using adaptive input methods</li>
+          <li>Adaptive web components can dramaticaly <strong>speed up</strong> page load times and save a lot of traffic</li>
+          <li>
+            Open source project, available on <strong>Github</strong> <br>
+            <a href="https://github.com/angular-adaptive/">https://github.com/angular-adaptive/</a>
+          </li>
+          <li>Referenced in <i>JavaScript Weekly, AngularJS Weekly, deSymfony 2013, Lone StarPHP 2013, WebElement...</i></li>
+        </ul>
+      </section>
+      <section>
+        <h3>adaptive-speech</h3>
+        <hr><img src="styles/videos/adaptive-speech.gif" width="320px">
+      </section>
+      <section>
+        <h3>adaptive-speech</h3>
+        <video width="250" controls loop>
+          <source src="styles/videos/adaptive-speech.mp4">
+        </video>
+        <pre><code class="default">bower install angular-adaptive-speech
+</code></pre>
+      </section>
+      <section>
+        <h3>adaptive-scroll</h3>
+        <video width="250" controls loop>
+          <source src="styles/videos/adaptive-scroll.mp4">
+        </video>
+        <pre><code class="default">bower install angular-adaptive-scroll
+</code></pre>
+      </section>
+      <section>
+        <h3>Gyrocopter</h3>
+        <p>Gyroscope emulator, extension for Chrome Developer Tools</p>
+        <hr><img src="styles/gyrocopter.png" width="300px">
+        <hr>
+        <p>Available on <a href="https://chrome.google.com/webstore/detail/gyrocopter/oooalfgemajfclliinfcdkifafmcfjop">chrome web store</a></p>
+        <p>cca 200 installs</p>
+      </section>
+      <section>
+        <h3>adaptive-motion</h3>
+        <video width="250" controls loop>
+          <source src="styles/videos/adaptive-motion.mp4">
+        </video>
+        <pre><code class="default">bower install angular-adaptive-motion
+</code></pre>
+      </section>
+      <section>
+        <h3>adaptive-googlemaps</h3>
+        <video width="250" controls loop>
+          <source src="styles/videos/adaptive-googlemaps.mp4">
+        </video>
+        <pre><code class="default">bower install angular-adaptive-googlemaps
+</code></pre>
+      </section>
+      <section>
+        <h3>More libraries</h3>
+        <h4>adaptive-youtube</h4>
+        <pre><code class="default">bower install angular-adaptive-youtube
+</code></pre>
+        <h4>adaptive-detection</h4>
+        <pre><code class="default">bower install angular-adaptive-detection
+</code></pre>
+        <h4>speech-synthesis</h4>
+        <pre><code class="default">bower install speech-synthesis
+</code></pre>
+      </section>
+    </article>
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>
