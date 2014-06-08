@@ -51,30 +51,61 @@ html
 
       section
         h2 Adaptive web components
-        p There are many commonly used web services that produce many requests and <strong>unnecessary web traffic</strong> event the website user does not want to use them.
-        p There are also <strong>native mobile application</strong> for that services with better perfomance which provide full user experience.
-
-      section
-
-        p Utilize <strong>conditional loading</strong> to serve the best experience for the right context
-        img(src='styles/maps.png', width='400px')
-
-      section
-        h2 Evaluation and experiments
-
-      section
-        h3 Adaptive input methods
+        p There are many commonly used web services (<i>videos, maps...</i>) that produce many requests and <strong>unnecessary web traffic</strong> even the website user does not want to use them.
+        hr
+        img(src='styles/youtube-timeline.png', width='400px')
+        hr
+        p To load an average YouTube video we need to make 9 requests and download 1517 kB of data.
 
       section
         h3 Adaptive web components
+        p There are also <strong>native mobile applications</strong> for that services with better perfomance and provide full user experience.
+        hr
+        div(class='slideshow')
+          img(src='styles/gmaps-discover.png', height='200px')
+          img(src='styles/gmaps-navigate.png', height='200px')
+          img(src='styles/gmaps-streetview.png', height='200px')
+          img(src='styles/youtube-more.png', height='200px')
+
+      section
+        h3 Adaptive web components
+        p We can utilize <strong>conditional loading</strong> to serve the best experience <br/>for the right context.
+        hr
+        img(src='styles/maps.png', width='400px')
+
+      section
+        h3 Adaptive web components
+        p ...and hide the logic behind the <strong>reuseable</strong> web component.
+
+        hr
+        pre
+          code.language-javascript.
+            $scope.options = {
+              sensor: false,
+              size: '500x300',
+              zoom: 9,
+              center: 'San Francisco International Airport',
+              markers: ['San Francisco', 'San Jose'],
+              maptype: 'terrain'
+            };
+
+            &lt;googlemaps class="google-maps" options="options"/&gt;
+
+      section
+        h3 Adaptive web components
+        p We can save <strong>3 requests</strong> and up to <strong>1100 kB of traffic</strong> for an average Youtube video*.
+        p We can save <strong>62 requests</strong> and up to <strong>5000 kB of traffic</strong> for an average Google Map component*.
+        hr
         img(src='styles/gmaps-fullload.png', width='400px')
+        hr
+        p Page load times for an average Youtube video.
 
       section
         h2 Conclusion
         ul
-          li We can enhance user exparience using adaptive input methods
-          li Adaptive web components can dramaticaly speed up page load times and save a lot of traffic
-          li Open-source project, available on Github <br>
+          li We can <strong>enhance user exparience</strong> using adaptive input methods
+          li Adaptive web components can dramaticaly <strong>speed up</strong> page load times and save a lot of traffic
+          li Open source project, available on <strong>Github</strong> <br>
             <a href="https://github.com/angular-adaptive/">https://github.com/angular-adaptive/</a>
           li Referenced in <i>JavaScript Weekly, AngularJS Weekly, deSymfony 2013, Lone StarPHP 2013, WebElement...</i>
 
