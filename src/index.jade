@@ -52,14 +52,27 @@ html
       section
         h2 Adaptive input methods
         hr
+        p There is <strong>no universal input</strong> for the Web. It is much more important to interface design than screen size.
+        p The challenge for us over the next few years is not designing for one input but many.
+        hr
+        p We have been experimenting to control web applications using:
         ul
-          li Speech
-          li Motion detected by device
-          li Motion detected by web camera
+          li voice commands
+          li motion detected by device
+          li motion detected by web camera
 
       section
-        h3 Speech
-        p Speech recognition is an <strong>experimental feature</strong>, available only in Chrome browser.
+        h3 Speech recognition
+        p Speech recognition is an <strong>experimental feature</strong>.
+        p It is available only in Chrome browser and internet connection is required.
+        p We have proposed a <strong>concept to control web applications</strong> using voice commands.
+        p We have a <strong>multilangual support</strong>.
+
+      section
+        h3 Speech recognition
+        p We use continuous speech recognition to get an utterance string and compare it to the <strong>regular expressions</strong>.
+        p <strong>Callback</strong> method is called when voice command is recognised.
+        p Regular expressions allow us to configure a single command for multiple subjects.
         p We can use voice commands to control the whole web application.
 
       section
@@ -73,6 +86,8 @@ html
         h3 Motion detected by device
         p Discovered <strong>severe issues</strong> across browsers.
         p Device orientation API <strong>does not comply</strong> with W3C specification!
+        hr
+        p We do not recommend to use it in the web applications.
 
       section
         h3 Motion detected by web camera

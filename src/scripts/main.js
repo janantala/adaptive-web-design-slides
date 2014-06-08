@@ -1,7 +1,7 @@
 bespoke.from('article', {
   keys: true,
   touch: true,
-  bullets: 'li, .bullet',
+  bullets: false,
   scale: true,
   hash: true,
   progress: true,
