@@ -42,6 +42,63 @@
         </ul>
       </section>
       <section>
+        <h2>Adaptive input methods</h2>
+        <hr>
+        <p>There is <strong>no universal input</strong> for the Web. It is much more important to interface design than screen size.</p>
+        <p>The challenge for us over the next few years is not designing for one input but many.</p>
+        <hr>
+        <p>We have been experimenting to control web applications using:</p>
+        <ul>
+          <li>voice commands</li>
+          <li>motion detected by device</li>
+          <li>motion detected by web camera</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Speech recognition</h3>
+        <p>Speech recognition is an <strong>experimental feature</strong>.</p>
+        <p>It is available only in Chrome browser and internet connection is required.</p>
+        <p>We have proposed a <strong>concept to control web applications</strong> using voice commands.</p>
+        <p>We have a <strong>multilangual support</strong>.</p>
+      </section>
+      <section>
+        <h3>Speech recognition</h3>
+        <p>We use continuous speech recognition to get an utterance string and compare it to the <strong>regular expressions</strong>.</p>
+        <p><strong>Callback</strong> method is called when voice command is recognised.</p>
+        <p>Regular expressions allow us to configure a single command for multiple subjects.</p>
+        <p>We can use voice commands to control the whole web application.</p>
+      </section>
+      <section>
+        <h3>Motion detected by device</h3>
+        <p>Powered by <strong>always on sensor</strong> - <i>gyroscope</i> and <i>device orientation API</i>.</p>
+        <p>We have access to <strong>3 axis rotation information</strong>.</p>
+        <p>We have proposed to use it as a replacement of the application scroll by touch events or mice wheel.</p>
+        <p>Based on the subtraction between starting and current orientation we can decide which direction we scroll and how fast.</p>
+      </section>
+      <section>
+        <h3>Motion detected by device</h3>
+        <p>Discovered <strong>severe issues</strong> across browsers.</p>
+        <p>Device orientation API <strong>does not comply</strong> with W3C specification!</p>
+        <hr>
+        <p>We do not recommend to use it in the web applications.</p>
+      </section>
+      <section>
+        <h3>Motion detected by web camera</h3>
+        <p>We use a <strong>video camera stream</strong> and devide it into image frames.</p>
+        <p>Then we can detect a website user in the each frame using a <strong>HSV filter</strong>.</p>
+        <p>When we compare all pixels in two adjacent frames we get <strong>difference points</strong>.</p>
+        <p>When we apply this comparision to multiple frames we can calculate a <strong>motion vector</strong>.</p>
+        <hr>
+        <div class="slideshow"><img src="styles/video.png" height="80px"><img src="styles/skin.png" height="80px"><img src="styles/edges.png" height="80px"></div>
+      </section>
+      <section>
+        <h3>Motion detected by web camera</h3>
+        <p>We support <strong>4 direction</strong> motion events.</p>
+        <p>Canvas allows to use a <strong>hardware acceleration</strong>.</p>
+        <p>Web camera stream has a <strong>high power usage</strong>.</p>
+        <p>We need a <strong>proper ambient lighting</strong>. There can be detection issues in too dark and too bright scenes.</p>
+      </section>
+      <section>
         <h2>Adaptive web components</h2>
         <p>There are many commonly used web services (<i>videos, maps...</i>) that produce many requests and <strong>unnecessary web traffic</strong> even the website user does not want to use them.</p>
         <hr><img src="styles/youtube-timeline.png" width="400px">
@@ -94,6 +151,11 @@
           </li>
           <li>Referenced in <i>JavaScript Weekly, AngularJS Weekly, deSymfony 2013, Lone StarPHP 2013, WebElement...</i></li>
         </ul>
+      </section>
+      <section>
+        <h2>Angular-Adaptive</h2>
+        <hr><img src="styles/aa.png" height="300px">
+        <hr><a href="https://github.com/angular-adaptive/">https://github.com/angular-adaptive/</a>
       </section>
       <section>
         <h3>adaptive-speech</h3>
