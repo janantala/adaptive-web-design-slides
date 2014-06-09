@@ -119,13 +119,23 @@ article.bespoke-parent {
   margin-left: 3em;
 }
 @media print {
+  .bespoke-slide.deck-slide p {
+    font-size: 24px;
+  }
+}
+@media print {
   .bespoke-slide {
     zoom: 1 !important;
     height: 743px;
-    width: 100%;
+    width: 80%;
     page-break-before: always;
     position: static;
-    margin: 0;
+    margin: 0 auto;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    -ms-transition: none;
+    transition: none;
   }
 }
 .bespoke-before {
@@ -134,6 +144,15 @@ article.bespoke-parent {
   -o-transform: translateX(100px) translateX(-400px) rotateY(-90deg) translateX(-400px);
   -ms-transform: translateX(100px) translateX(-400px) rotateY(-90deg) translateX(-400px);
   transform: translateX(100px) translateX(-400px) rotateY(-90deg) translateX(-400px);
+}
+@media print {
+  .bespoke-before {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
 }
 .bespoke-after {
   -webkit-transform: translateX(-100px) translateX(400px) rotateY(90deg) translateX(400px);
@@ -270,17 +289,32 @@ h1 {
   margin-bottom: 16px;
   font-weight: 200;
 }
+@media print {
+  h1 {
+    font-size: 82px;
+  }
+}
 h2 {
   font-size: 42px;
   letter-spacing: -1px;
   margin-bottom: 8px;
   font-weight: 200;
 }
+@media print {
+  h2 {
+    font-size: 52px;
+  }
+}
 h3 {
   font-size: 24px;
   font-weight: 200;
   margin-bottom: 24px;
   color: #606060;
+}
+@media print {
+  h3 {
+    font-size: 34px;
+  }
 }
 hr {
   visibility: hidden;
@@ -296,6 +330,11 @@ p {
   margin: 0 100px 12px;
   line-height: 22px;
   font-weight: 200;
+}
+@media print {
+  p {
+    line-height: 32px;
+  }
 }
 a {
   color: #0089f3;
