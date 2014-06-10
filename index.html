@@ -11,7 +11,7 @@
       <section class="deck-slide"><img src="styles/title.png" width="400px">
         <p>By <a href="http://www.janantala.com/">Ján Antala</a></p>
         <p>Supervisor: Assoc. Professor <a href="http://www2.fiit.stuba.sk/~cernans/main/contact.html">Michal Čerňanský</a></p>
-        <p>FIIT STU - Jun 11, 2014</p>
+        <p>FIIT STU - Jun 11, 2014</p><img src="styles/logo-fiit.gif" width="150px" class="fiit">
       </section>
       <section>
         <h2>Adaptive Web Design</h2>
@@ -36,8 +36,7 @@
         <hr>
         <ul>
           <li>enhance control of the web apps using adaptive input methods</li>
-          <li>save transferred data</li>
-          <li>improve page load times</li>
+          <li>save traffic and improve page load times</li>
           <li>easy integration into existing web apps</li>
         </ul>
       </section>
@@ -60,20 +59,33 @@
         <p>It is available only in Chrome browser and internet connection is required.</p>
         <p>We have proposed a <strong>concept to control web applications</strong> using voice commands.</p>
         <p>We have a <strong>multilangual support</strong>.</p>
+        <p>We can use voice commands to control the whole web application.</p>
       </section>
       <section>
         <h3>Speech recognition</h3>
         <p>We use continuous speech recognition to get an utterance string and compare it to the <strong>regular expressions</strong>.</p>
         <p><strong>Callback</strong> method is called when voice command is recognised.</p>
         <p>Regular expressions allow us to configure a single command for multiple subjects.</p>
-        <p>We can use voice commands to control the whole web application.</p>
+        <hr>
+        <pre><code class="language-javascript">'addToList': {
+  'regex': /^to do .+/gi,
+  'lang': 'en-US',
+  'call': function(e){
+      // callback
+  }
+}
+</code></pre>
       </section>
       <section>
         <h3>Motion detected by device</h3>
         <p>Powered by <strong>always on sensor</strong> - <i>gyroscope</i> and <i>device orientation API</i>.</p>
         <p>We have access to <strong>3 axis rotation information</strong>.</p>
-        <p>We have proposed to use it as a replacement of the application scroll by touch events or mice wheel.</p>
-        <p>Based on the subtraction between starting and current orientation we can decide which direction we scroll and how fast.</p>
+        <hr><img src="styles/gyro.png" width="200px">
+      </section>
+      <section>
+        <h3>Motion detected by device</h3>
+        <p>We have proposed to use it as a replacement of the application <strong>scroll</strong> by touch events or mice wheel.</p>
+        <p>Based on the subtraction between starting and current orientation we can decide <strong>which direction</strong> we scroll and <strong>how fast</strong>.</p>
       </section>
       <section>
         <h3>Motion detected by device</h3>
@@ -94,7 +106,7 @@
       <section>
         <h3>Motion detected by web camera</h3>
         <p>We support <strong>4 direction</strong> motion events.</p>
-        <p>Canvas allows to use a <strong>hardware acceleration</strong>.</p>
+        <p>Canvas allows us to use a <strong>hardware acceleration</strong>.</p>
         <p>Web camera stream has a <strong>high power usage</strong>.</p>
         <p>We need a <strong>proper ambient lighting</strong>. There can be detection issues in too dark and too bright scenes.</p>
       </section>
@@ -124,8 +136,8 @@
   sensor: false,
   size: '500x300',
   zoom: 9,
-  center: 'San Francisco International Airport',
-  markers: ['San Francisco', 'San Jose'],
+  center: 'Bratislava',
+  markers: ['Bratislava'],
   maptype: 'terrain'
 };
 
@@ -154,15 +166,14 @@
       </section>
       <section>
         <h2>Angular-Adaptive</h2>
+        <p>Companion to adaptive web design.</p>
         <hr><img src="styles/aa.png" height="300px">
         <hr><a href="https://github.com/angular-adaptive/">https://github.com/angular-adaptive/</a>
       </section>
       <section>
         <h3>adaptive-speech</h3>
-        <hr><img src="styles/videos/adaptive-speech.gif" width="320px">
-      </section>
-      <section>
-        <h3>adaptive-speech</h3>
+        <p>This module allows us to control web app using voice commands.</p>
+        <hr>
         <video width="250" controls loop>
           <source src="styles/videos/adaptive-speech.mp4">
         </video>
@@ -171,6 +182,8 @@
       </section>
       <section>
         <h3>adaptive-scroll</h3>
+        <p>This module allows us to control web app using gyroscope rotation.</p>
+        <hr>
         <video width="250" controls loop>
           <source src="styles/videos/adaptive-scroll.mp4">
         </video>
@@ -187,6 +200,8 @@
       </section>
       <section>
         <h3>adaptive-motion</h3>
+        <p>This module allows us to control web app using web cam.</p>
+        <hr>
         <video width="250" controls loop>
           <source src="styles/videos/adaptive-motion.mp4">
         </video>
@@ -195,6 +210,8 @@
       </section>
       <section>
         <h3>adaptive-googlemaps</h3>
+        <p>This module allows us to conditionally load google maps.</p>
+        <hr>
         <video width="250" controls loop>
           <source src="styles/videos/adaptive-googlemaps.mp4">
         </video>
