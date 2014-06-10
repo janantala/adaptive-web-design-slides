@@ -22,6 +22,8 @@ html
         p Supervisor: Assoc. Professor <a href="http://www2.fiit.stuba.sk/~cernans/main/contact.html">Michal Čerňanský</a>
         p FIIT STU - Jun 11, 2014
 
+        img(src='styles/logo-fiit.gif', width='150px', class='fiit')
+
       section
         h2 Adaptive Web Design
         p We consider <i>adaptive web design</i> as an equal with creating a <strong>single Web experience</strong>.
@@ -45,8 +47,7 @@ html
         hr
         ul
           li enhance control of the web apps using adaptive input methods
-          li save transferred data
-          li improve page load times
+          li save traffic and improve page load times
           li easy integration into existing web apps
 
       section
@@ -67,20 +68,36 @@ html
         p It is available only in Chrome browser and internet connection is required.
         p We have proposed a <strong>concept to control web applications</strong> using voice commands.
         p We have a <strong>multilangual support</strong>.
+        p We can use voice commands to control the whole web application.
+
 
       section
         h3 Speech recognition
         p We use continuous speech recognition to get an utterance string and compare it to the <strong>regular expressions</strong>.
         p <strong>Callback</strong> method is called when voice command is recognised.
         p Regular expressions allow us to configure a single command for multiple subjects.
-        p We can use voice commands to control the whole web application.
+        hr
+        pre
+          code.language-javascript.
+            'addToList': {
+              'regex': /^to do .+/gi,
+              'lang': 'en-US',
+              'call': function(e){
+                  // callback
+              }
+            }
 
       section
         h3 Motion detected by device
         p Powered by <strong>always on sensor</strong> - <i>gyroscope</i> and <i>device orientation API</i>.
         p We have access to <strong>3 axis rotation information</strong>.
-        p We have proposed to use it as a replacement of the application scroll by touch events or mice wheel.
-        p Based on the subtraction between starting and current orientation we can decide which direction we scroll and how fast.
+        hr
+        img(src='styles/gyro.png', width='200px')
+
+      section
+        h3 Motion detected by device
+        p We have proposed to use it as a replacement of the application <strong>scroll</strong> by touch events or mice wheel.
+        p Based on the subtraction between starting and current orientation we can decide <strong>which direction</strong> we scroll and <strong>how fast</strong>.
 
       section
         h3 Motion detected by device
@@ -104,7 +121,7 @@ html
       section
         h3 Motion detected by web camera
         p We support <strong>4 direction</strong> motion events.
-        p Canvas allows to use a <strong>hardware acceleration</strong>.
+        p Canvas allows us to use a <strong>hardware acceleration</strong>.
         p Web camera stream has a <strong>high power usage</strong>.
         p We need a <strong>proper ambient lighting</strong>. There can be detection issues in too dark and too bright scenes.
 
@@ -143,8 +160,8 @@ html
               sensor: false,
               size: '500x300',
               zoom: 9,
-              center: 'San Francisco International Airport',
-              markers: ['San Francisco', 'San Jose'],
+              center: 'Bratislava',
+              markers: ['Bratislava'],
               maptype: 'terrain'
             };
 
@@ -170,6 +187,7 @@ html
 
       section
         h2 Angular-Adaptive
+        p Companion to adaptive web design.
         hr
         img(src='styles/aa.png', height='300px')
         hr
@@ -177,6 +195,8 @@ html
 
       section
         h3 adaptive-speech
+        p This module allows us to control web app using voice commands.
+        hr
         video(width='250', controls, loop)
           source(src='styles/videos/adaptive-speech.mp4')
 
@@ -186,6 +206,8 @@ html
 
       section
         h3 adaptive-scroll
+        p This module allows us to control web app using gyroscope rotation.
+        hr
         video(width='250', controls, loop)
           source(src='styles/videos/adaptive-scroll.mp4')
 
@@ -205,6 +227,8 @@ html
 
       section
         h3 adaptive-motion
+        p This module allows us to control web app using web cam.
+        hr
         video(width='250', controls, loop)
           source(src='styles/videos/adaptive-motion.mp4')
 
@@ -214,6 +238,8 @@ html
 
       section
         h3 adaptive-googlemaps
+        p This module allows us to conditionally load google maps.
+        hr
         video(width='250', controls, loop)
           source(src='styles/videos/adaptive-googlemaps.mp4')
 
