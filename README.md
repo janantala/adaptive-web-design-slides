@@ -1,17 +1,17 @@
-# Adaptive Web Design
-> A [Bespoke.js](http://markdalgleish.com/projects/bespoke.js) presentation, built with [generator-bespoke](https://github.com/markdalgleish/generator-bespoke)
+<p align="center">
+    <a href="http://www.janantala.com/slides/adaptive-web-design-slides/">
+    <img src="https://raw.githubusercontent.com/janantala/adaptive-web-design-slides/master/src/styles/title.png" alt="Adaptive Web Design"/>
+    </a>
+</p>
 
-## View slides locally
+[FIIT STU](http://www.fiit.stuba.sk/en.html?page_id=749)
 
-First, ensure you have the following installed:
+Bratislava, 11th June 2014
 
-1. [Node.js](http://nodejs.org)
-2. [Bower](http://bower.io): `$ npm install -g bower`
-3. [Grunt](http://gruntjs.com): `$ npm install -g grunt-cli`
+[View slides](http://www.janantala.com/slides/adaptive-web-design-slides/)
 
-Then, install dependencies and run the preview server:
+# License
 
-```bash
-$ npm install && bower install
-$ grunt server
-```
+The MIT License
+
+Copyright (c) 2014 [Jan Antala](http://www.janantala.com)
